@@ -1,0 +1,2 @@
+# OPiP
+skrypty pshell
