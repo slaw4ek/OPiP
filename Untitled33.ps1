@@ -1,0 +1,1 @@
+﻿ Start-Process 'C:\Program Files (x86)\CMS Lite\CMS Lite.exe' -wait
