@@ -16,3 +16,5 @@ New-MailboxRestoreRequest -SourceMailbox $guid1.Guid -TargetMailbox $guid2.guid 
 Get-MailboxRestoreRequest
 
 New-Mailbox -Shared -Name 
+
+New-MailUser
