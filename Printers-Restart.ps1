@@ -1,6 +1,13 @@
 ﻿$cred = Get-Credential
-$comp= "d0p68c2"
+$comp = @()
 
+do{
+$comp = Read-Host "Wprowadz nazwy komputerow do zrestartowania spoolera, aby zakończyć wpisz koniec"
+}
+while($comp[-1] -ne "koniec")
+$comp[-1]=0
+
+$comp=("d0k68c2", "d0n38c2", "7lhpj32", "d0k48c2")
 
 Invoke-Command -ComputerName $comp -Credential $cred {
 Stop-Service -Name Spooler
