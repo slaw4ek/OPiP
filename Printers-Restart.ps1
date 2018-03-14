@@ -9,6 +9,11 @@ $comp[-1]=0
 
 $comp=("d0k68c2", "d0n38c2", "7lhpj32", "d0k48c2")
 
+for($i = 50; $i -le 250; $i++){
+$comp=$comp+("10.218.2."+$i)
+}
+
+
 Invoke-Command -ComputerName $comp -Credential $cred {
 Stop-Service -Name Spooler
 }
