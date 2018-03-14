@@ -7,15 +7,17 @@ $comp = Read-Host "Wprowadz nazwy komputerow do zrestartowania spoolera, aby zak
 while($comp[-1] -ne "koniec")
 $comp[-1]=0
 
-$comp=("d0k68c2", "d0n38c2", "7lhpj32", "d0k48c2")
+$comp="8g4kf02" #("d0k68c2", "d0n38c2", "7lhpj32", "d0k48c2")
 
-for($i = 50; $i -le 250; $i++){
+for($i = 50; $i -le 120; $i++){
+
 $comp=$comp+("10.218.2."+$i)
+
 }
 
 
 Invoke-Command -ComputerName $comp -Credential $cred {
-Stop-Service -Name Spooler
+
 }
 
 

@@ -2,11 +2,11 @@
 
 $csv=Import-Csv -Delimiter ";" -Path C:\AdminTools\POSH\comps.csv
 
-Invoke-Command -ComputerName $csv.AssetName -Credential $cred {
+Invoke-Command -ComputerName $csv.AssetName -Credential $cred -Verbose{
 
 Stop-Service -Name Spooler
 
-sleep(5)
+sleep(10)
 
 New-Item -ItemType Directory -Path C:\AdminTools\ -Name spool_bckp
 
